@@ -50,7 +50,7 @@ class Swiss(Bank):
     """
     ### YOUR CODE HERE
     def __init__(self, bal = 0):
-        self.bal = 1000
+        self.bal = bal
 
     def basicinfo(self):
         print("This is the Swiss Bank")
