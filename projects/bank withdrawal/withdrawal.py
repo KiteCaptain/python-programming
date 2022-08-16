@@ -50,7 +50,7 @@ class Swiss(Bank):
     """
     ### YOUR CODE HERE
     def __init__(self, bal = 0):
-        self.bal = bal
+        self.bal = 1000
 
     def basicinfo(self):
         print("This is the Swiss Bank")
@@ -61,17 +61,17 @@ class Swiss(Bank):
             print("Insufficient funds")
             return "Your balance is:" + str(self.bal)
         else:
-            new_bal = self.bal - amount
-            print("Withdrawn amount: " +str(amount))
-            print("New balance: " + str(new_bal))
-            return new_bal
+            self.bal = self.bal - amount
+            print(f"Withdrawn amount: {amount}")
+            print(f"New balance: {self.bal}" )
+            return self.bal
 
 
 
 # Driver Code
 def main():
     assert issubclass(Bank, ABC), "Bank must derive from class ABC"
-    s = Swiss(1000)
+    s = Swiss()
     print(s.basicinfo())
     s.withdraw(30)
     s.withdraw(1000)
