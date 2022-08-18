@@ -1,11 +1,16 @@
-# Sample Solution code
-class MyFirstClass():
-    print("Who wrote this?")
-    index = "Author-Book"
+class A:
+   def a(self):
+       return "Function inside A"
 
-    def hand_list(self, philosopher, book):
-        print(MyFirstClass.index)
-        print(philosopher + " wrote the book: " + book)
+class B:
+   def a(self):
+       return "Function inside B"
 
-whodunnit = MyFirstClass()
-whodunnit.hand_list("Sun Tzu", "The Art of War")
+class C:
+   pass
+
+class D(C, A, B):
+   pass
+
+d = D()
+print(d.a())
