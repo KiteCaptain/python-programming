@@ -17,7 +17,7 @@ printBoard(theBoard)
 turn = 'X'
 for i in range(9):
     printBoard(theBoard)
-    print('Turn for' + turn + '. Move on which space?')
+    print('Turn for ' + turn + '. Move on which space?')
     move = input()
     theBoard[move] = turn
     if turn == "X":
